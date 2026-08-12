@@ -147,5 +147,5 @@ export const defaultProfile = {
   title: 'Software Engineer | IoT Enthusiast & AI Engineer',
   tagline: 'Building intelligent systems at the intersection of embedded hardware and artificial intelligence. Passionate about creating solutions that bridge the physical and digital worlds.',
   about: "I'm a passionate software Engineer with expertise in IoT, AI, and full-stack development.",
-  profileImageUrl: 'https://i.imgur.com/M84CDUVh.jpg',
+  profileImageUrl: 'https://i.imgur.com/SgGxFvJ.jpg',
 };

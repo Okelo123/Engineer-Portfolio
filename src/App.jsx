@@ -43,7 +43,7 @@ export default function App() {
   }
 
   useEffect(() => {
-    document.title = 'Dev Portfolio';
+    document.title = 'Portfolio';
   }, []);
 
   return (
