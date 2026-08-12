@@ -54,13 +54,41 @@ npm run build     # production build → dist/
 npm run preview   # preview the production build
 ```
 
-## Deploy to Netlify
+## Deploy to Vercel
 
-Two options:
+1. Push this repo to GitHub.
+2. In Vercel, choose "Import Project" and select this repository.
+3. Set the following Environment Variable in Vercel:
 
-1. **Connect the git repo** to Netlify and set:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
+   - `RESEND_API_KEY` = your Resend API key
 
-2. **Drag-and-drop deploy**: run `npm run build` locally, then drag the generated
-   `dist/` folder into Netlify's deploy area.
+4. Build command: `npm run build`
+5. Output directory: `dist`
+
+### Local Vercel testing
+
+Install Vercel CLI:
+
+```bash
+npm install -D vercel
+npx vercel dev
+```
+
+This will run your frontend and serverless API locally.
+
+## Send email from the contact form
+
+The contact form posts to `/api/contact`, which is implemented in `api/contact.js`.
+It uses Resend to forward messages to `jumabrian3583@gmail.com`.
+
+### Local environment
+
+Create a `.env.local` file in the project root with:
+
+```env
+RESEND_API_KEY=re_your_api_key_here
+```
+
+### Important
+
+Do not commit `.env.local`. It is already ignored by `.gitignore`.
