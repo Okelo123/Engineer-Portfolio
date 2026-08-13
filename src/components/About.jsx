@@ -4,6 +4,7 @@ const METRICS = [
   { label: 'Projects', value: 9 },
   { label: 'Domains', value: 3 },
   { label: 'Technologies', value: 8 },
+  { label: 'Years Building', value: '3+' },
   { label: '% Dedication', value: 100 },
 ];
 

@@ -1,4 +1,4 @@
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
 import { useState } from 'react';
 import { GithubIcon, LinkedinIcon, XIcon } from './SocialIcons';
 
@@ -63,8 +63,8 @@ export default function Contact() {
               <Send size={18} /> {sending ? 'Sending...' : 'Send'}
             </button>
             {sent && (
-              <div style={{ padding: '0.75rem', borderRadius: 10, background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.3)', color: '#10b981' }}>
-                ✓ Message sent!
+              <div style={{ padding: '0.75rem', borderRadius: 10, background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.3)', color: '#10b981', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <CheckCircle2 size={18} /> Message sent!
               </div>
             )}
             {error && (

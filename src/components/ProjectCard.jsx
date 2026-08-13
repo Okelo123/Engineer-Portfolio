@@ -1,4 +1,4 @@
-import { ImageIcon } from 'lucide-react';
+import { ImageIcon, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
 
 export default function ProjectCard({ project, index }) {
@@ -45,9 +45,9 @@ export default function ProjectCard({ project, index }) {
             href={project.demo_url || '#'}
             target="_blank"
             rel="noreferrer"
-            style={{ color: '#fff', background: 'var(--accent)', padding: '0.5rem 1.25rem', borderRadius: 99, fontWeight: 600, textDecoration: 'none' }}
+            style={{ color: '#fff', background: 'var(--accent)', padding: '0.5rem 1.25rem', borderRadius: 99, fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
           >
-            🔗 Demo
+            <ExternalLink size={18} /> Demo
           </a>
         </div>
       </div>

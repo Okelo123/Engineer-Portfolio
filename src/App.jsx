@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { FileText } from 'lucide-react';
 import Navbar from './components/Navbar';
 import MobileMenu from './components/MobileMenu';
 import Hero from './components/Hero';
@@ -38,7 +39,7 @@ export default function App() {
       document.body.removeChild(a);
       showToast(`Downloading ${label} CV...`);
     } else {
-      showToast(`📄 CV link for ${label} not set.`);
+      showToast(`CV link for ${label} not set.`);
     }
   }
 

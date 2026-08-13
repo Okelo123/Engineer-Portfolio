@@ -14,7 +14,7 @@ export default function Navbar({ isDark, onToggleTheme, onToggleMobile, mobileOp
     <nav className="nav-main">
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 64 }}>
         <a href="#hero" style={{ textDecoration: 'none', color: 'var(--accent)', fontWeight: 700, fontSize: '1.25rem', fontFamily: "'JetBrains Mono', monospace" }}>
-          &lt;Dev /&gt;
+          &lt;Portfolio&gt;
         </a>
 
         <div className="nav-links-desktop" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
