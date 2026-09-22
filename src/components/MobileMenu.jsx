@@ -1,16 +1,12 @@
-const NAV_LINKS = [
-  { href: '#hero', label: 'Home' },
-  { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#cv', label: 'CV' },
-  { href: '#contact', label: 'Contact' },
-];
+import { useContent } from '../content/useContent';
 
 export default function MobileMenu({ open, onClose }) {
+  const { content } = useContent();
+  const links = [{ href: '#hero', label: content.nav.home }, ...content.nav.links];
+
   return (
     <div className={`mobile-menu${open ? ' open' : ''}`}>
-      {NAV_LINKS.map((link) => (
+      {links.map((link) => (
         <a key={link.href} href={link.href} onClick={onClose}>
           {link.label}
         </a>

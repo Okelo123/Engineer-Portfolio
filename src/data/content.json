@@ -1,0 +1,350 @@
+{
+  "profile": {
+    "name": "Brian Juma",
+    "eyebrow": "Software · IoT · Machine learning",
+    "title": "Software engineer",
+    "tagline": "I build devices, models, and web software — from ESP32 hardware to forecasting tools and business applications.",
+    "imageUrl": "https://i.imgur.com/SgGxFvJ.jpg",
+    "primaryButton": "View projects",
+    "secondaryButton": "Contact"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Background",
+    "subtitle": "Software engineering across embedded systems, machine learning, and web applications.",
+    "profileTitle": "Profile",
+    "profile": "Software engineer working across IoT, machine learning, and full-stack web development.",
+    "focusTitle": "Focus",
+    "focus": "IoT devices with Arduino and ESP32, applied machine learning for forecasting and identity checks, and web platforms for schools, fleets, and field work.",
+    "metrics": [
+      {
+        "label": "Projects",
+        "value": "9"
+      },
+      {
+        "label": "Domains",
+        "value": "3"
+      },
+      {
+        "label": "Technologies",
+        "value": "8"
+      },
+      {
+        "label": "Years building",
+        "value": "3+"
+      }
+    ]
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "Technologies",
+    "subtitle": "Languages and tools used in current work.",
+    "groups": [
+      {
+        "icon": "Code2",
+        "title": "Programming",
+        "skills": [
+          {
+            "name": "Python",
+            "level": 90
+          },
+          {
+            "name": "JavaScript",
+            "level": 85
+          },
+          {
+            "name": "C/C++",
+            "level": 80
+          }
+        ]
+      },
+      {
+        "icon": "Cpu",
+        "title": "IoT & Embedded",
+        "skills": [
+          {
+            "name": "Arduino",
+            "level": 92
+          },
+          {
+            "name": "ESP32",
+            "level": 88
+          },
+          {
+            "name": "Sensor Integration",
+            "level": 85
+          }
+        ]
+      },
+      {
+        "icon": "Brain",
+        "title": "AI & ML",
+        "skills": [
+          {
+            "name": "NLP / Chatbots",
+            "level": 85
+          },
+          {
+            "name": "ML / TensorFlow",
+            "level": 80
+          }
+        ]
+      },
+      {
+        "icon": "Globe",
+        "title": "Web Dev",
+        "skills": [
+          {
+            "name": "HTML/CSS",
+            "level": 95
+          },
+          {
+            "name": "React / Node",
+            "level": 82
+          }
+        ]
+      }
+    ]
+  },
+  "projectsSection": {
+    "eyebrow": "Work",
+    "title": "Selected projects",
+    "subtitle": "Devices, models, and software shipped as working systems.",
+    "practiceEyebrow": "Practice",
+    "practiceTitle": "How I work",
+    "filters": [
+      {
+        "key": "all",
+        "label": "All"
+      },
+      {
+        "key": "iot",
+        "label": "IoT"
+      },
+      {
+        "key": "ai",
+        "label": "AI"
+      },
+      {
+        "key": "software",
+        "label": "Software"
+      }
+    ],
+    "capabilities": [
+      {
+        "title": "Problem solving",
+        "text": "Breaking a system into parts that can be built, tested, and maintained."
+      },
+      {
+        "title": "Embedded systems",
+        "text": "Microcontroller programs and sensor setups for devices that run outside a browser."
+      },
+      {
+        "title": "Machine learning",
+        "text": "Models for forecasting, document checks, and text classification."
+      },
+      {
+        "title": "Web applications",
+        "text": "Interfaces and backends for records, bookings, and field tools."
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Smart Door Lock",
+      "desc": "Biometric + remote access with ESP32.",
+      "category": "iot",
+      "techs": [
+        "Arduino",
+        "ESP32",
+        "MQTT"
+      ],
+      "image_url": "https://i.imgur.com/MzMisUz.jpg",
+      "demo_url": ""
+    },
+    {
+      "id": 2,
+      "title": "Robotic Obstacle Avoidance System",
+      "desc": "Autonomous navigation that detects and steers around obstacles in real time.",
+      "category": "iot",
+      "techs": [
+        "Arduino Uno",
+        "Ultrasonic Sensor",
+        "Relay"
+      ],
+      "image_url": "https://i.imgur.com/mReIYY1.jpg",
+      "demo_url": ""
+    },
+    {
+      "id": 3,
+      "title": "Smart Security System",
+      "desc": "Real-time intrusion detection & alerting via connected sensors.",
+      "category": "iot",
+      "techs": [
+        "Arduino",
+        "PIR Sensor",
+        "Passive-Buzzer"
+      ],
+      "image_url": "https://i.imgur.com/ZsT4itp.jpg",
+      "demo_url": ""
+    },
+    {
+      "id": 4,
+      "title": "Shamba Weather AI",
+      "desc": "AI-driven weather forecasting & farm advisory for smallholder farmers.",
+      "category": "ai",
+      "techs": [
+        "Python",
+        "React",
+        "TensorFlow"
+      ],
+      "image_url": "https://i.imgur.com/8KCVwWc.jpg",
+      "demo_url": ""
+    },
+    {
+      "id": 5,
+      "title": "AI-Powered KYC (Know Your Customer) Verification System",
+      "desc": "Automated identity verification using facial recognition & document OCR for financial compliance.",
+      "category": "ai",
+      "techs": [
+        "Python",
+        "Supabase DB",
+        "React"
+      ],
+      "image_url": "https://i.imgur.com/qyZVWc1.jpg",
+      "demo_url": ""
+    },
+    {
+      "id": 6,
+      "title": "Sentiment Analysis",
+      "desc": "NLP-based sentiment classification for customer feedback and reviews.",
+      "category": "ai",
+      "techs": [
+        "Python",
+        "NLP",
+        "Hugging Face Transformers"
+      ],
+      "image_url": "https://i.imgur.com/XSb10o3.jpg",
+      "demo_url": ""
+    },
+    {
+      "id": 7,
+      "title": "School Management System",
+      "desc": "Student records, attendance, and fee management platform for schools.",
+      "category": "software",
+      "techs": [
+        "React",
+        "Supabase",
+        "Flask"
+      ],
+      "image_url": "https://i.imgur.com/gU9JNMv.jpg",
+      "demo_url": ""
+    },
+    {
+      "id": 8,
+      "title": "Car Hire System",
+      "desc": "Vehicle booking, fleet tracking & rental management.",
+      "category": "software",
+      "techs": [
+        "React",
+        "Supabase",
+        "Node.js"
+      ],
+      "image_url": "https://i.imgur.com/g6CuYZU.jpg",
+      "demo_url": ""
+    },
+    {
+      "id": 9,
+      "title": "Mobile Development",
+      "desc": "Cross-platform & native mobile apps built with Flutter and Swift.",
+      "category": "software",
+      "techs": [
+        "Flutter",
+        "PostgreSQL",
+        "Swift"
+      ],
+      "image_url": "https://i.imgur.com/B18MSoG.jpg",
+      "demo_url": ""
+    }
+  ],
+  "cv": {
+    "eyebrow": "CV",
+    "title": "Curriculum vitae",
+    "subtitle": "Separate versions for IoT, AI, and software engineering.",
+    "items": [
+      {
+        "key": "iot",
+        "label": "IoT CV",
+        "url": "/cv/Brian-Juma-IoT-Robotics-CV.pdf"
+      },
+      {
+        "key": "ai",
+        "label": "AI CV",
+        "url": "/cv/Brian-Juma-AI-CV.pdf"
+      },
+      {
+        "key": "software",
+        "label": "Software CV",
+        "url": "/cv/Brian-Juma-Software-CV.pdf"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Get in touch",
+    "subtitle": "For project work, collaborations, or a conversation about a role.",
+    "emailLabel": "Email",
+    "email": "hello@juma.dev",
+    "locationLabel": "Location",
+    "location": "Remote",
+    "sendLabel": "Send message",
+    "sendingLabel": "Sending…",
+    "sentLabel": "Message sent.",
+    "socials": [
+      {
+        "type": "github",
+        "label": "GitHub",
+        "url": "https://github.com/Okelo123"
+      },
+      {
+        "type": "linkedin",
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/jumabrian-394161296"
+      },
+      {
+        "type": "x",
+        "label": "X",
+        "url": ""
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Brian Juma"
+  },
+  "nav": {
+    "home": "Home",
+    "links": [
+      {
+        "href": "#about",
+        "label": "About"
+      },
+      {
+        "href": "#skills",
+        "label": "Skills"
+      },
+      {
+        "href": "#projects",
+        "label": "Projects"
+      },
+      {
+        "href": "#cv",
+        "label": "CV"
+      },
+      {
+        "href": "#contact",
+        "label": "Contact"
+      }
+    ]
+  }
+}

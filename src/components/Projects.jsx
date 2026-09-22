@@ -1,84 +1,55 @@
 import { useMemo, useState } from 'react';
-import { projects } from '../data/projects';
+import { useContent } from '../content/useContent';
 import ProjectCard from './ProjectCard';
 
-const FILTERS = [
-  { key: 'all', label: 'All' },
-  { key: 'iot', label: 'IoT' },
-  { key: 'ai', label: 'AI' },
-  { key: 'software', label: 'Software' },
-];
-
-const CAPABILITIES = [
-  {
-    title: 'Problem Solving',
-    text: 'Analytical approach to breaking down complex challenges into elegant, efficient solutions.',
-  },
-  {
-    title: 'Embedded Systems',
-    text: 'Designing and programming microcontroller-based systems for real-world IoT applications.',
-  },
-  {
-    title: 'AI Development',
-    text: 'Building intelligent chatbots, recommendation engines, and machine learning models.',
-  },
-  {
-    title: 'Full-Stack Web',
-    text: 'End-to-end web development from responsive frontends to scalable backend architectures.',
-  },
-];
-
 export default function Projects() {
+  const { content } = useContent();
+  const section = content.projectsSection;
   const [filter, setFilter] = useState('all');
 
   const filtered = useMemo(
-    () => (filter === 'all' ? projects : projects.filter((p) => p.category === filter)),
-    [filter]
+    () => (filter === 'all' ? content.projects : content.projects.filter((project) => project.category === filter)),
+    [content.projects, filter]
   );
 
   return (
-    <section id="projects" style={{ padding: '100px 0' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 1.5rem' }}>
-        <div className="animate-on-scroll" style={{ textAlign: 'center' }}>
-          <p style={{ color: 'var(--accent)', fontWeight: 600, fontSize: '0.8rem', letterSpacing: 3, textTransform: 'uppercase', marginBottom: '0.5rem' }}>
-            Portfolio
-          </p>
-          <h2 className="section-title">Featured Projects</h2>
-          <div className="section-subtitle">IoT · AI · Software</div>
+    <section id="projects" className="section">
+      <div className="container">
+        <div className="section-head center">
+          <p className="eyebrow">{section.eyebrow}</p>
+          <h2 className="section-title">{section.title}</h2>
+          <p className="section-subtitle">{section.subtitle}</p>
         </div>
 
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
-          {FILTERS.map((f) => (
+        <div className="filter-row">
+          {section.filters.map((item) => (
             <button
-              key={f.key}
-              className={`filter-btn${filter === f.key ? ' active' : ''}`}
-              onClick={() => setFilter(f.key)}
+              key={item.key}
+              className={`filter-btn${filter === item.key ? ' active' : ''}`}
+              onClick={() => setFilter(item.key)}
             >
-              {f.label}
+              {item.label}
             </button>
           ))}
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(320px,1fr))', gap: '1.5rem' }}>
-          {filtered.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} />
+        <div className="grid-projects">
+          {filtered.map((project) => (
+            <ProjectCard key={project.id} project={project} filters={section.filters} />
           ))}
         </div>
 
-        <div style={{ marginTop: '4rem' }}>
-          <div className="animate-on-scroll" style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            <p style={{ color: 'var(--accent)', fontWeight: 600, fontSize: '0.8rem', letterSpacing: 3, textTransform: 'uppercase', marginBottom: '0.5rem' }}>
-              Capabilities
-            </p>
-            <h2 className="section-title">What I Bring</h2>
-            <div className="section-subtitle">Core strengths and specializations</div>
+        <div style={{ marginTop: '4.5rem' }}>
+          <div className="section-head">
+            <p className="eyebrow">{section.practiceEyebrow}</p>
+            <h2 className="section-title">{section.practiceTitle}</h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '1.5rem' }}>
-            {CAPABILITIES.map((item) => (
-              <div key={item.title} className="glass-card animate-on-scroll" style={{ padding: '2rem', minHeight: 220 }}>
-                <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '1rem' }}>{item.title}</h3>
-                <p style={{ color: 'var(--text-secondary)', lineHeight: 1.8, fontSize: '0.95rem' }}>{item.text}</p>
+          <div className="grid-skills">
+            {section.capabilities.map((item) => (
+              <div key={item.title} className="card" style={{ padding: '1.4rem 1.5rem' }}>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: 600, marginBottom: '0.55rem' }}>{item.title}</h3>
+                <p style={{ color: 'var(--muted)', lineHeight: 1.7, fontSize: '0.95rem' }}>{item.text}</p>
               </div>
             ))}
           </div>

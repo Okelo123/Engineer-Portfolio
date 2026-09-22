@@ -1,41 +1,42 @@
 import { Brain, Code2, Cpu, Globe } from 'lucide-react';
-import { skillGroups } from '../data/projects';
+import { useContent } from '../content/useContent';
 
 const ICONS = { Code2, Cpu, Brain, Globe };
 
 export default function Skills() {
+  const { content } = useContent();
+  const skills = content.skills;
+
   return (
-    <section id="skills" style={{ padding: '100px 0', background: 'var(--bg-secondary)' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 1.5rem' }}>
-        <div className="animate-on-scroll" style={{ textAlign: 'center' }}>
-          <p style={{ color: 'var(--accent)', fontWeight: 600, fontSize: '0.8rem', letterSpacing: 3, textTransform: 'uppercase', marginBottom: '0.5rem' }}>
-            Expertise
-          </p>
-          <h2 className="section-title">Skills &amp; Technologies</h2>
-          <div className="section-subtitle">Tools I work with</div>
+    <section id="skills" className="section section-alt">
+      <div className="container">
+        <div className="section-head">
+          <p className="eyebrow">{skills.eyebrow}</p>
+          <h2 className="section-title">{skills.title}</h2>
+          <p className="section-subtitle">{skills.subtitle}</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: '2rem' }}>
-          {skillGroups.map((group) => {
-            const Icon = ICONS[group.icon];
+        <div className="grid-skills">
+          {skills.groups.map((group) => {
+            const Icon = ICONS[group.icon] || Code2;
             return (
-              <div key={group.title} className="glass-card animate-on-scroll" style={{ padding: '2rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
-                  <div style={{ width: 40, height: 40, borderRadius: 10, background: group.color, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Icon size={20} color="#fff" />
+              <div key={group.title} className="card" style={{ padding: '1.4rem 1.5rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', marginBottom: '1.25rem' }}>
+                  <div className="skill-icon">
+                    <Icon size={16} />
                   </div>
-                  <h3 style={{ fontWeight: 600, fontSize: '1.1rem' }}>{group.title}</h3>
+                  <h3 style={{ fontWeight: 600, fontSize: '1rem' }}>{group.title}</h3>
                 </div>
 
                 <div>
                   {group.skills.map((skill, i) => (
-                    <div key={skill.name} style={{ marginTop: i === 0 ? 0 : '1rem' }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <span style={{ fontSize: '0.85rem' }}>{skill.name}</span>
-                        <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>{skill.level}%</span>
+                    <div key={`${skill.name}-${i}`} style={{ marginTop: i === 0 ? 0 : '0.9rem' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem' }}>
+                        <span style={{ fontSize: '0.88rem' }}>{skill.name}</span>
+                        <span style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>{skill.level}%</span>
                       </div>
                       <div className="skill-bar-track">
-                        <div className="skill-bar-fill" data-width={skill.level} />
+                        <div className="skill-bar-fill" style={{ width: `${Math.max(0, Math.min(100, Number(skill.level) || 0))}%` }} />
                       </div>
                     </div>
                   ))}
